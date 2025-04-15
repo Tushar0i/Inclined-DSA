@@ -11,29 +11,63 @@ public class prob4 {
 
         Scanner scanner = new Scanner(System.in);
 
-        int noOfElement = 0;
+        // int noOfElement = 0;
+        // int sumOfEven = 0;
+        // int sumOfOdd = 0;
+        // int num = 0;
+
+        // System.out.print("Enter the number of elements in set: ");
+        // noOfElement = scanner.nextInt();
+
+        // for (int i = 1; i <= noOfElement; i++) {
+
+        //     System.out.print("Enter your number"+i+":");
+        //     num = scanner.nextInt();
+
+        //     if (num % 2 == 0) {
+
+        //         sumOfEven += num;
+        //     } else {
+        //         sumOfOdd += num;
+        //     }
+
+        // }
+        // System.out.println("Sum of even numbers is:" + sumOfEven + ", Sum of odd numbers is:" + sumOfOdd);
+
+
+        // another approch
+
+        int num;
+        int choice;
         int sumOfEven = 0;
         int sumOfOdd = 0;
-        int num = 0;
 
-        System.out.print("Enter the number of elements in set: ");
-        noOfElement = scanner.nextInt();
 
-        for (int i = 1; i <= noOfElement; i++) {
-
-            System.out.print("Enter your number"+i+":");
+        do {
+            System.out.print("Enter number : ");
             num = scanner.nextInt();
+
 
             if (num % 2 == 0) {
 
-                sumOfEven += num;
-            } else {
-                sumOfOdd += num;
-            }
+                         sumOfEven += num;
+                     } else {
+                         sumOfOdd += num;
+                   }
 
-        }
+            System.out.println("To continue press 1 for exit press 0 ");
+
+            choice = scanner.nextInt();
+
+            
+        } while (choice != 0 );
+
+
+
+
         System.out.println("Sum of even numbers is:" + sumOfEven + ", Sum of odd numbers is:" + sumOfOdd);
 
+        
         scanner.close();
     }
 }
