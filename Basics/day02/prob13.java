@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
-public class prob11 {
+public class prob13 {
 
     public static void main(String[] args) {
-        // print a solid rombus pattern
+        // print a diomond pattern
 
         Scanner scanner = new Scanner(System.in);
 
@@ -15,20 +15,29 @@ public class prob11 {
 
     public static void pattern(int a) {
 
-      
         for (int i = 1; i <= a; i++) {
-            
-            for (int k = 1; k <= a-i ; k++) {
+
+            for (int j = 1; j <= a-i; j++) {
                 System.out.print("  ");
-                
             }
-            for (int j = 1; j <= a; j++) {
+            for (int j = 1; j <= 2*i-1; j++) {
                 System.out.print("* ");
             }
-           
+
             System.out.println();
         }
 
+        for (int i = a; i >= 1; i--) {
+
+            for (int j = 1; j <= a-i; j++) {
+                System.out.print("  ");
+            }
+            for (int j = 1; j <= 2*i-1; j++) {
+                System.out.print("* ");
+            }
+
+            System.out.println();
+        }
 
     }
 }
